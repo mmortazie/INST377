@@ -3,10 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Matt Lab 6: Forms</title>
     <link rel="stylesheet" href="css/form_styles.css">
 </head>
 <body>
-    
+    <h1 style="text-align:center">HTML Forms Lab</h1>
+    <!-- 4. Set your form's action method to post on submit -->
+    <!-- 5. Set your form to post itself to supplieed URL on submission -->
+    <form action = "https://fierce-taiga-97625.herokuapp.com/lab" method = "post">
+        <ul>
+            <li> <!-- 2. Include an input field for text -->
+                <label for = "name">Name</label><br>
+                <input type = "text" id = "name" name = "name" maxlength = "140">
+            </li>
+            <li> <!-- 3. Include a textarea field -->
+                <label for = "interests">Interests</label><br>
+                <textarea id = "interests" name = "interests" rows = "5" cols = "33">Interests...</textarea>
+            </li>
+            <li>
+                <button type = "submit">Submit</button> 
+            </li>
+        </ul>
+    </form>
 </body>
 </html>
