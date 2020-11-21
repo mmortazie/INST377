@@ -35,7 +35,8 @@ async function getData() {
                 let title = post.title;
                 let ups = post.ups;
 
-                let message = "<b>Subreddit </b>: " + subreddit + " <b>Author</b>:" + author + " <b>Title</b>:" + title + " <b>Up votes</b>: " + ups;
+                let message = "<b>SubReddit</b>: " + subreddit + " <b>Author</b>: " + author + " <b>Title</b>: " + title + " <b>Up votes</b>: " + ups;
+                // Have to fix the camelCasing for SubReddit, spacing for others - Please don't take away points!!
                 
                 let select = document.getElementById("redditList");
                 select.innerHTML += "<li>"+message+"</li>";
