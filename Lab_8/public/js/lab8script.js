@@ -10,7 +10,7 @@ let chartValues = [];
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min);
+    return Math.floor(Math.random()*(max-min)+min);
   }
 
 async function getData() {
@@ -18,7 +18,6 @@ async function getData() {
         .then(res => res.json())
         .then((json) => {
             let listSize = json.data.children.length;
-            // Loop to pick 5 random entries
             for (x = 0; x < 5; x++) {
                 /*
                     Get a random number within the size of the list
@@ -31,12 +30,12 @@ async function getData() {
                 let random = getRandomInt(0,listSize);
                 let post = json.data.children[random].data;
                 console.log(post)
-                let subReddit = post.subreddit;
+                let subreddit = post.subreddit;
                 let author = post.author;
                 let title = post.title;
                 let ups = post.ups;
 
-                let message = "<b>SubReddit</b>: "+subReddit+" <b>author</b>: "+author+" <b>Title</b>: "+title+" <b>UpVotes</b>: "+ups;
+                let message = "<b>Subreddit </b>: " + subreddit + " <b>Author</b>:" + author + " <b>Title</b>:" + title + " <b>Up votes</b>: " + ups;
                 
                 let select = document.getElementById("redditList");
                 select.innerHTML += "<li>"+message+"</li>;"
