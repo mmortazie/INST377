@@ -31,7 +31,7 @@ async function getData() {
                 let random = getRandomInt(0,listSize);
                 let post = json.data.children[random].data;
                 console.log(post)
-                let subReddit = post.subReddit;
+                let subReddit = post.subreddit;
                 let author = post.author;
                 let title = post.title;
                 let ups = post.ups;
