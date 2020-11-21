@@ -50,7 +50,8 @@ async function getData() {
         chart.render(); // Do you need to remove the comments from here in order to get it to work? Yep!
 };
 
-window.onload = async function makeChart() {
+// window.onload = async function makeChart() {
+async function makeChart() {
     getData();
     chart = new CanvasJS.Chart("chartContainer", {
         title: {
