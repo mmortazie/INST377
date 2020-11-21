@@ -38,7 +38,7 @@ async function getData() {
                 let message = "<b>Subreddit </b>: " + subreddit + " <b>Author</b>:" + author + " <b>Title</b>:" + title + " <b>Up votes</b>: " + ups;
                 
                 let select = document.getElementById("redditList");
-                select.innerHTML += "<li>"+message+"</li>;"
+                select.innerHTML += "<li>"+message+"</li>";
                 
                 let addToChart = {'label':author,y:ups}; // Gave this. This needs to be added to the 'chartValues'
                 /*.......*/
