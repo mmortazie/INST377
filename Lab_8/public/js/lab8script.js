@@ -7,6 +7,12 @@ console.log(url);
 let settings = { method: "Get" };
 let chartValues = [];
 
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min);
+  }
+
 async function getData() {
     await fetch(url, settings)
         .then(res => res.json())
